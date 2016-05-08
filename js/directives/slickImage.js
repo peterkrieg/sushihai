@@ -7,8 +7,10 @@ angular.module('myApp')
 
 			$images.slick({
 
+				swipeToSlide: true,
 				arrows: false,
 				autoplay: true,
+				speed: 700,
 				autoplaySpeed: 3000
 
 			});

@@ -8,11 +8,27 @@ angular.module('myApp', ['ui.router'])
 		controller: 'mainCtrl'
 	})
 
+
+	.state('about', {
+		url: '/about', 
+		templateUrl: 'partials/about.html'
+	})
+
+	.state('menu', {
+		url: '/menu', 
+		templateUrl: 'partials/menu.html'
+	})
+
+	.state('gallery', {
+		url: '/gallery', 
+		templateUrl: 'partials/gallery.html'
+	})
+
+
 	.state('contact', {
 		url: '/contact',
 		templateUrl: 'partials/contact.html',
 	})
-
 
 
 
