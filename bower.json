@@ -21,6 +21,7 @@
     "bourbon": "^4.2.7",
     "font-awesome": "^4.6.2",
     "reset-css": "^2.0.2011012603",
-    "angular-ui-router": "^0.2.18"
+    "angular-ui-router": "^0.2.18",
+    "slick-carousel": "^1.6.0"
   }
 }

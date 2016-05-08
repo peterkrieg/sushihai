@@ -48,6 +48,9 @@ gulp.task('javascript', function() {
 		// './bower_components/ngSmoothScroll/lib/angular-smooth-scroll.js',
 		'./bower_components/angular-ui-router/release/angular-ui-router.js',
 
+		// jquery library for slideshows/carousels
+		'./bower_components/slick-carousel/slick/slick.js',
+
 
 
 		//_________________________GSAP animation__________________________

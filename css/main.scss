@@ -6,6 +6,8 @@ $navbar-height: 70px;
 @import "../bower_components/bourbon/app/assets/stylesheets/bourbon";
 @import "../bower_components/reset-css/_reset.scss";
 @import "../bower_components/font-awesome/css/font-awesome.css";
+@import "../bower_components/slick-carousel/slick/slick.scss";
+@import "../bower_components/slick-carousel/slick/slick-theme.scss";
 
 //____________________Variables_____________________
 $headerFont: 'Philosopher', sans-serif;
@@ -74,6 +76,8 @@ li{
 //____________________Importing components_____________________
 @import "components/topNavbar";
 @import "components/mainNavbar";
+@import "components/home";
+
 
 
 

@@ -1,0 +1,31 @@
+div#home{
+	background: lightblue;
+
+	div.image-container{
+		height: 300px;
+	}
+
+
+	ul.images{
+		div.image{
+			height: 600px;
+			background-size: cover;
+			background-repeat: no-repeat;
+			background-position: center center;
+			// background-image: url('../img/img1.jpg');
+		}
+	}
+
+
+
+
+
+
+
+
+
+
+
+
+
+}// home container, nothing below this
