@@ -1,0 +1,41 @@
+nav#top-navbar{
+	padding: 9px 0;
+	height: 30px;
+	background: #26282C;
+	color: white;
+	font-size: 12px;
+
+	div.sub-container{
+		display: inline-block;
+		div{
+			display: inline-block;
+			&:not(:last-of-type){
+				margin-right: 30px;
+			}
+		}
+	}
+
+	div.phone, div.email{
+		i.fa-phone {
+			margin-right: 6px;
+		}
+	}
+
+	div.social-media{
+		float: right;
+		i{
+			font-size: 15px;
+			position: relative;
+			bottom: 2px;
+		}
+		a{
+			display: inline-block;
+			&:not(:last-of-type){
+				margin-right: 15px;
+			}
+		}
+	}
+
+
+
+}

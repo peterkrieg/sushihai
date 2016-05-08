@@ -64,6 +64,7 @@ gulp.task('javascript', function() {
 
 		//_______My controllers, directives, app.js__________________________
 		'./js/app.js',
+		'./js/*.js',
 		'./js/directives/*.js',
 		'./js/services/*.js',
 		'./js/controllers/*.js',

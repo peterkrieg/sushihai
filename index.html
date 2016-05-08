@@ -1,30 +1,48 @@
 <!doctype html>
-<html lang="en-us">
+<html lang="en-us" ng-app="myApp">
 <head>
 	<meta charset="UTF-8">
 
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	
+	<!--_________________________Google fonts__________________________-->
+	<link href='https://fonts.googleapis.com/css?family=Philosopher:400,400italic,700|Open+Sans:400,700,300,400italic,700italic' rel='stylesheet' type='text/css'>
+
 	<link rel="stylesheet" href="css/main.css">
-	
 </head>
 
-<body>
+<body ng-controller="mainCtrl">
 
-	<h1>Test test</h1>
+	<nav id="top-navbar">
+		<div class="container">
+			<div class="row">
+				<div class="basic-contact sub-container">
+					<div class="phone">
+						<i class="fa fa-phone" aria-hidden="true"></i>
+						<a class="plain-link" href="tel:9712219161">(971)-221-9161</a>
+					</div>
+					<div class="email">
+						<i class="fa fa-envelope" aria-hidden="true"></i>
+						<a href="mailto:haicuisine@gmail.com" class="plain-link">haicuisine@gmail.com</a>
+					</div>
+					<div class="intro-text">
+						<span>HAI SUSHI CATERING!  Bend, Hood River, PDX</span>
+					</div>
+					
+				</div>
+				<div class="social-media sub-container">
+					<a href="https://www.instagram.com/sushi_hai/" target="_blank"><i class="fa fa-instagram" aria-hidden="true"></i></a>
+					<a href="https://www.facebook.com/haicuisine" target="_blank"><i class="fa fa-facebook" aria-hidden="true"></i></a>
 
-	<header>
-		<p> this is swwswhere the header goes  </p>
-	</header>
+				</div>
+			</div>
+		</div>
+	</nav>
 
-	<section>
-		<p> Here is a section </p>
-	</section>
 
-	<footer>
-		<p>  This is the footer  </p>
-	</footer>
+	<div ui-view></div>
 
-<script src="scripts/all.js"></script>
+
+	<script src="scripts/all.js"></script>
 </body>
 </html>
