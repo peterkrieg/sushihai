@@ -1,3 +1,7 @@
+//____________________Overriding bootstrap before loading_____________________
+$navbar-height: 70px;
+
+
 @import "../bower_components/bootstrap-sass/assets/stylesheets/bootstrap";
 @import "../bower_components/bourbon/app/assets/stylesheets/bourbon";
 @import "../bower_components/reset-css/_reset.scss";
@@ -61,12 +65,18 @@ li{
 
 
 
+//____________________Importing Partials, other files_____________________
+@import "mixins/mediaQuery";
 
 
 
 
 //____________________Importing components_____________________
-@import "components/top_navbar";
+@import "components/topNavbar";
+@import "components/mainNavbar";
+
+
+
 
 
 

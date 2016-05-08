@@ -16,7 +16,7 @@ nav#top-navbar{
 	}
 
 	div.phone, div.email{
-		i.fa-phone {
+		i{
 			margin-right: 6px;
 		}
 	}
@@ -35,6 +35,15 @@ nav#top-navbar{
 			}
 		}
 	}
+
+
+	@include phoneOrLess {
+		display: none;
+	}
+
+
+
+
 
 
 
