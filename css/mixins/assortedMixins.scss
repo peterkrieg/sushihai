@@ -1,0 +1,7 @@
+// shortcut to target all headings at once, instead of h1, h2, h3, etc..
+@mixin headings {
+	h1, h2, h3,
+	h4, h5, h6 {
+		@content;
+	}
+}

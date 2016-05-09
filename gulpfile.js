@@ -76,11 +76,11 @@ gulp.task('javascript', function() {
 
 
 		])
-	// .pipe(sourcemaps.init())
+	.pipe(sourcemaps.init())
 	.pipe(ngAnnotate())
 	.pipe(concat('all.js'))
 	.pipe(uglify())
-	// .pipe(sourcemaps.write())
+	.pipe(sourcemaps.write())
 	.pipe(gulp.dest('./compiled'))
 }); // end of javascript gulp task
 
@@ -92,14 +92,14 @@ gulp.task('sass', function () {
 	return gulp.src([
 		'./css/main.scss',
 		])
-	// .pipe(sourcemaps.init())
+	.pipe(sourcemaps.init())
 	.pipe(sass({outputStyle: 'compressed'})
 		// .pipe(sass()
 
 		.on('error', sass.logError))
 
 	.pipe(concat('main.css'))
-	// .pipe(sourcemaps.write())
+	.pipe(sourcemaps.write())
 
 	.pipe(gulp.dest('./compiled'));
 });

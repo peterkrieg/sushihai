@@ -1,34 +1,36 @@
 angular.module('myApp', ['ui.router'])
 .config(function($urlRouterProvider, $stateProvider){
 
+	var DefaultState = function(name, controller){
+		if(name){
+			this.url = '/'+name;
+			this.templateUrl = 'partials/'+name+'.html';
+		}
+		// this.controller =  controller ? controller : 'mainCtrl';
+	}
+
 	$stateProvider
-	.state('home', {
-		url: '/',
-		templateUrl: 'partials/home.html',
-		controller: 'mainCtrl'
-	})
 
 
-	.state('about', {
-		url: '/about', 
-		templateUrl: 'partials/about.html'
-	})
-
-	.state('menu', {
-		url: '/menu', 
-		templateUrl: 'partials/menu.html'
-	})
-
-	.state('gallery', {
-		url: '/gallery', 
-		templateUrl: 'partials/gallery.html'
-	})
 
 
-	.state('contact', {
-		url: '/contact',
-		templateUrl: 'partials/contact.html',
-	})
+
+	.state('home', new DefaultState('home'))
+	.state('about', new DefaultState('about'))
+
+	.state('menu', new DefaultState('menu'))
+
+	.state('gallery', new DefaultState('gallery'))
+	.state('contact', new DefaultState('contact'));
+
+
+
+
+
+	// .state('contact', {
+	// 	url: '/contact',
+	// 	templateUrl: 'partials/contact.html',
+	// })
 
 
 

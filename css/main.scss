@@ -68,6 +68,8 @@ li{
 
 //____________________Importing Partials, other files_____________________
 @import "mixins/mediaQuery";
+@import "mixins/assortedMixins";
+
 
 
 
@@ -76,6 +78,11 @@ li{
 @import "components/topNavbar";
 @import "components/mainNavbar";
 @import "components/home";
+@import "components/about";
+@import "components/menu";
+@import "components/gallery";
+@import "components/contact";
+
 
 
 
