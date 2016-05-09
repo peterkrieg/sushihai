@@ -15,7 +15,10 @@ angular.module('myApp', ['ui.router'])
 
 
 
-	.state('home', new DefaultState('home'))
+	.state('home', {
+		url: '/',
+		templateUrl: 'partials/home.html',
+	})
 	.state('about', new DefaultState('about'))
 
 	.state('menu', new DefaultState('menu'))

@@ -16,7 +16,7 @@ angular.module('myApp')
 					// var test = $tabElements.filter('[data-state="'+currentState+'"]').addClass('active');
 					var $activeTab = $tabElements.find('[data-state="'+currentState+'"]').parent();
 					// var $activeTab = $('[data-state="'+currentState+'"]').parent();
-					console.log($activeTab);
+					// console.log($activeTab);
 					$activeTab.addClass('active');
 
 					// var test = $('[data-state="'+currentState+'"]');

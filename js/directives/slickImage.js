@@ -19,8 +19,19 @@ angular.module('myApp')
 				var imageNumber = $(this).attr('data-image-number');
 
 				$(this).css('background-image', 'url(\'img/'+imageNumber+'.jpg\')');
-				// $(this).css('background-image', "url('img/img1.jpg')");
-			})
+			});
+
+			// override image slider, to make it fill screen
+
+			function sizeImageSlider(){
+				var windowHeight = $(window).height();
+				var navbarsHeight = $('#top-navbar').height() + $('#main-navbar').height();
+				var imageSliderHeight = windowHeight - navbarsHeight;
+				$images.css('height', imageSliderHeight);
+			}
+			sizeImageSlider();
+
+			$(window).resize(sizeImageSlider);
 
 
 

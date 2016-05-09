@@ -15,62 +15,69 @@
 </head>
 
 <body ng-controller="mainCtrl">
+	<div class="everything-wrapper">
 
-	<nav id="top-navbar">
-		<div class="container">
-			<div class="row">
-				<div class="basic-contact sub-container">
-					<div class="phone">
-						<i class="fa fa-phone" aria-hidden="true"></i>
-						<a class="plain-link" href="tel:9712219161">(971)-221-9161</a>
+		<nav id="top-navbar">
+			<div class="container">
+				<div class="row">
+					<div class="basic-contact sub-container">
+						<div class="phone">
+							<i class="fa fa-phone" aria-hidden="true"></i>
+							<a class="plain-link" href="tel:9712219161">(971)-221-9161</a>
+						</div>
+						<div class="email">
+							<i class="fa fa-envelope" aria-hidden="true"></i>
+							<a href="mailto:haicuisine@gmail.com" class="plain-link">haicuisine@gmail.com</a>
+						</div>
+						<div class="intro-text">
+							<span>HAI SUSHI CATERING!  Bend, Hood River, PDX</span>
+						</div>
 					</div>
-					<div class="email">
-						<i class="fa fa-envelope" aria-hidden="true"></i>
-						<a href="mailto:haicuisine@gmail.com" class="plain-link">haicuisine@gmail.com</a>
-					</div>
-					<div class="intro-text">
-						<span>HAI SUSHI CATERING!  Bend, Hood River, PDX</span>
+					<div class="social-media sub-container">
+						<a href="https://www.instagram.com/sushi_hai/" target="_blank"><i class="fa fa-instagram" aria-hidden="true"></i></a>
+						<a href="https://www.facebook.com/haicuisine" target="_blank"><i class="fa fa-facebook" aria-hidden="true"></i></a>
 					</div>
 				</div>
-				<div class="social-media sub-container">
-					<a href="https://www.instagram.com/sushi_hai/" target="_blank"><i class="fa fa-instagram" aria-hidden="true"></i></a>
-					<a href="https://www.facebook.com/haicuisine" target="_blank"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+			</div>
+		</nav>
+
+		<nav class="navbar navbar-default" id="main-navbar">
+			<div class="container">
+				<!-- Brand and toggle get grouped for better mobile display -->
+				<div class="navbar-header">
+					<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+						<span class="sr-only">Toggle navigation</span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+					</button>
+					<a class="navbar-brand smooth-scroll" ui-sref="home"><img class="logo" src="img/logo.png" alt=""></a>	
 				</div>
-			</div>
-		</div>
-	</nav>
 
-	<nav class="navbar navbar-default" id="main-navbar">
-		<div class="container">
-			<!-- Brand and toggle get grouped for better mobile display -->
-			<div class="navbar-header">
-				<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
-					<span class="sr-only">Toggle navigation</span>
-					<span class="icon-bar"></span>
-					<span class="icon-bar"></span>
-					<span class="icon-bar"></span>
-				</button>
-				<a class="navbar-brand smooth-scroll" ui-sref="home"><img class="logo" src="img/logo.png" alt=""></a>	
-			</div>
-
-			<!-- Collect the nav links, forms, and other content for toggling -->
-			<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-				<ul class="nav navbar-nav" tab-behavior>
-					<li ><a data-state="about" ui-sref="about">About</a></li>
-					<li><a data-state="menu" ui-sref="menu">Menu</a></li>
-					<li><a data-state="gallery" ui-sref="gallery">Gallery</a></li>
-					<li><a data-state="contact" ui-sref="contact">Contact</a></li>
-				</ul>
-			</div><!-- /.navbar-collapse -->
-		</div><!-- /.container-fluid -->
-	</nav>
+				<!-- Collect the nav links, forms, and other content for toggling -->
+				<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+					<ul class="nav navbar-nav" tab-behavior>
+						<li ><a data-state="about" ui-sref="about">About</a></li>
+						<li><a data-state="menu" ui-sref="menu">Menu</a></li>
+						<li><a data-state="gallery" ui-sref="gallery">Gallery</a></li>
+						<li><a data-state="contact" ui-sref="contact">Contact</a></li>
+					</ul>
+				</div><!-- /.navbar-collapse -->
+			</div><!-- /.container-fluid -->
+		</nav>
 
 
 
 
 
 
-	<div ui-view></div>
+		<div ui-view></div>
+
+		<footer>
+			<p>Bring the Sushi Bar To Your House!</p>
+		</footer>
+
+	</div><!-- everything wrapper, to make sure footer sticks to bottom-->
 
 
 	<script src="compiled/all.js"></script>

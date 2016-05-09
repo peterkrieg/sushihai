@@ -5,6 +5,8 @@ bower_components
 *.rtf
 *.pptx
 
+compiled/
+
 
 
 #____server stuff____

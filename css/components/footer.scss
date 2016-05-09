@@ -1,0 +1,19 @@
+footer{
+	padding: ($footerHeight - 16)/2 0;
+	height: $footerHeight;
+	position: absolute;
+	bottom: 0;
+	background: #202020;
+	display: block;
+	width: 100%;
+	margin-top: -5px;
+	p{
+		text-align: right;
+		color: white;
+		padding-right: 50px;
+		@include phoneOrLess {
+			padding-right: 20px;
+		}
+	}
+
+}

@@ -76,11 +76,11 @@ gulp.task('javascript', function() {
 
 
 		])
-	.pipe(sourcemaps.init())
+	// .pipe(sourcemaps.init())
 	.pipe(ngAnnotate())
 	.pipe(concat('all.js'))
-	.pipe(uglify())
-	.pipe(sourcemaps.write())
+	// .pipe(uglify())
+	// .pipe(sourcemaps.write())
 	.pipe(gulp.dest('./compiled'))
 }); // end of javascript gulp task
 

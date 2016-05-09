@@ -12,11 +12,13 @@ $navbar-height: 70px;
 $headerFont: 'Philosopher', sans-serif;
 $bodyFont: 'Open Sans', sans-serif;
 
+$footerHeight: 80px;
+
 
 
 
 //____________________General styles_____________________
-html, body{
+html, body, [ui-view]{
 	width: 100%;
 	height: 100%;
 }
@@ -61,6 +63,13 @@ li{
 	font-style: italic;
 }
 
+div.everything-wrapper{
+	min-height: 100%;
+	position: relative;
+	padding-bottom: $footerHeight;
+}
+
+
 
 
 
@@ -82,6 +91,8 @@ li{
 @import "components/menu";
 @import "components/gallery";
 @import "components/contact";
+@import "components/footer";
+
 
 
 
