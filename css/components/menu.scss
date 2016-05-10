@@ -1,10 +1,66 @@
 div#menu{
-	padding-top: 30px;
+	padding: 30px 0 100px;
 
 	li{
 		margin-bottom: 10px;
 	}
 
+	@include headings {
+		text-align: center;
+		margin-bottom: 15px;
+	}
+
+	i{
+		font-style: normal;
+		color: #bbb;
+		&.center{
+			position: relative;
+			top: 2px;
+		}
+	}
+
+	div.menu-block{
+		@include smallPhone {
+			width: 100%;
+		}
+	}
+
+	p.price-explanation{
+		margin-top: 10px;
+		text-align: center;
+	}
+	p{
+		text-align: center;
+	}
+
+
+	//_______Rolls section, where I do custom number of columns_____________________
+
+div.rolls{
+	padding-top: 20px;
+	$grid-columns: 16;
+	@include make-row()
+
+	div.item-names{
+		$grid-columns: 16;
+		@include make-sm-column(2, 16);
+		text-align: right;
+		li{
+			&:after{
+				content: ":";
+			}
+		}
+	}
+	div.item-descriptions{
+		$grid-columns: 16;
+		@include make-sm-column(6, 16);
+		text-align: left;
+	}
+
+
+
+
+}
 
 
 
