@@ -30,7 +30,14 @@ div#menu{
 		text-align: center;
 	}
 	p{
-		text-align: center;
+		// text-align: center;
+		&.roll-explanation{
+			@include tabletOrMore {
+				width: 70%;
+				margin: auto;
+			}
+			margin-bottom: 20px;
+		}
 	}
 
 
@@ -38,26 +45,55 @@ div#menu{
 
 div.rolls{
 	padding-top: 20px;
-	$grid-columns: 16;
-	@include make-row()
 
-	div.item-names{
-		$grid-columns: 16;
-		@include make-sm-column(2, 16);
+	div.menu-item{
+		float: left;
+		// height: 70px;
+		margin-bottom: 20px;
+	}
+
+	div.item-name{
+		padding-right: 0;
 		text-align: right;
-		li{
-			&:after{
-				content: ":";
-			}
+		height: 100%;
+		float: left;
+		width: 30%;
+		padding-right: 25px;
+		// posit/ion: absolute;
+		left: 0;
+		&:after{
+			content: ":";
 		}
 	}
-	div.item-descriptions{
-		$grid-columns: 16;
-		@include make-sm-column(6, 16);
-		text-align: left;
+	div.item-description{
+		position: relative;
+		bottom: 3px;
+		line-height: 20px;
+		float: right;
+		width: 70%;
+		&:after{
+			content: "."
+		}
 	}
 
 
+
+
+	// div.item-name{
+	// 	height: 100%;
+	// 	background: orange;
+	// 	// display: inline-block;
+	// 	width: 30%;
+	// 	&:after{
+	// 		content: ":";
+	// 	}
+	// }
+	// div.item-description{
+	// 	background: lightgreen;
+	// 	height: 100%;
+	// 	width: 70%;
+	// 	// display: inline-block;
+	// }
 
 
 }
