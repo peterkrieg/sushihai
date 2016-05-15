@@ -14,19 +14,21 @@ $linkHeight: 30px;
 		font-size: 16px;
 		font-family: $headerFont;
 		li{
+			text-align: center;
 			&:not(:last-of-type){
 				margin-right: 15px;
 			}
 		}
 		a{
+			display: inline-block;
 			border-radius: 5px;
 			text-align: center;
 			height: $linkHeight;
 			padding: ($linkHeight - 18)/2 15px 0;
 			margin: ($navbar-height - $linkHeight)/2 0;
-			// &:not(:last-of-type){
-			// 	margin-right: 10px;
-			// }
+			@include phoneOrLess {
+				margin: 5px auto;
+			}
 		}
 
 		li.active a {
