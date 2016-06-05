@@ -11,7 +11,7 @@ angular.module('myApp')
 				arrows: false,
 				autoplay: true,
 				speed: 700,
-				autoplaySpeed: 3000
+				autoplaySpeed: 6000
 
 			});
 

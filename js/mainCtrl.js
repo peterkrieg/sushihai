@@ -12,9 +12,9 @@ angular.module('myApp')
 	// 	console.log(response)
 	// })
 
-	$http.jsonp(url).then(function(response){
-		console.log(response);
-	})
+	// $http.jsonp(url).then(function(response){
+	// 	console.log(response);
+	// })
 
 
 

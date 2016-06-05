@@ -2,6 +2,13 @@
 $linkHeight: 30px;
 #main-navbar{
 	margin-bottom: 0;
+	.sticky-navbar &{
+		position: fixed;
+		top: 0;
+		right: 0;
+		left: 0;
+		z-index: 10;
+	}
 	img.logo{
 		height: $navbar-height+2;
 		width: auto;
