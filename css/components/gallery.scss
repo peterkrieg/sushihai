@@ -1,0 +1,72 @@
+section#gallery{
+	padding-top: 50px;
+	@include headings {
+		text-align: center;
+	}
+
+	div.image-container{
+		width: 100%;
+	}
+
+	h1.main-header{
+		margin-bottom: 30px;
+	}
+
+
+
+
+	div.images{
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: center;
+		width: 100%;
+	}
+
+	img.instagram-photo{
+		height: 300px;
+		width: auto;
+		margin-right: 20px;
+		@include desktopOrLess {
+			height: 220px;
+		}
+		@include phoneOrLess {
+			margin-right: 10px;
+			height: 190px;
+		}
+		@include smallPhone {
+			height: 140px;
+		}
+		margin-bottom: 30px;
+		border: 1px solid #111;
+	}
+
+	p.see-more{
+		margin-bottom: 20px;
+		text-align: center;
+		font-size: 16px;
+		a{
+			text-decoration: underline;
+		}
+	}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+}

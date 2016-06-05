@@ -1,5 +1,21 @@
-<div id="gallery">
-	<h2>Gallery</h2>
+<section id="gallery">
+	<h1 class="main-header">Gallery</h1>
+
+	<div class="container image-container">
+		
+		<div class="images" ng-show="instafeedPics">
+			<div class="image" ng-repeat="image in instafeedPics">
+				<img class="instagram-photo" ng-src="{{image.images.standard_resolution.url}}" alt="">
+			</div>
+		</div><!-- images -->
+
+		<hr>
+		<p class="see-more">See more on <a href="https://instagram.com/sushi_hai" target="_blank">Instagram</a></p>
+
+
+	</div>
+
+	
 	
 
 
@@ -29,4 +45,4 @@
 
 
 
-</div>
+</section>

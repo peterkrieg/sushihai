@@ -23,6 +23,12 @@ gulp.task('javascript', function() {
 		'./bower_components/jquery/dist/jquery.js',
 		// './bower_components/lodash/lodash.js',
 
+		// instafeed used to try to simplify the instagram part
+	'./bower_components/instafeed.js/instafeed.js',
+
+
+
+
 
 
 		// loading each bootstrap JS component in right order

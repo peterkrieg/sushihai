@@ -13,6 +13,17 @@ angular.module('myApp')
 });
 
 angular.module('myApp')
+.directive('gallerySection', function(){
+	return {
+		templateUrl: 'partials/gallery.html'
+	};
+});
+
+
+
+
+
+angular.module('myApp')
 .directive('assortedDirectives', function(){
 	return {
 		link: function(scope, elem, attrs){
@@ -32,6 +43,7 @@ angular.module('myApp')
 					}
 				}
 			});
+
 
 
 

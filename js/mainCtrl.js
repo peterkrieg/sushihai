@@ -1,19 +1,49 @@
 angular.module('myApp')
-.controller('mainCtrl', function($scope, $http){
+.controller('mainCtrl', function($scope, $http, $interval){
 
-	console.log('hello');
+	// show fewer photos for mobile
+	var numPhotos = $(window).width() > 700 ? 20 : 10;
+
+	var feed = new Instafeed({ 
+		get: 'user',
+		userId: '274968323', 
+		accessToken: '1359984932.d8d1d50.66ef28ddde2f498094c8e3804f87c627', 
+		sortBy: 'most-recent', limit: numPhotos });
+
+		feed.run(); 
 
 
-	var url = 'https://www.instagram.com/sushi_hai/media/?callback=JSON_CALLBACK';
-	// var url = "http://swapi.co/api/people/1/";
+	// var instafeedPics;
+	var checkPics = $interval(function(){
+		if(window.instafeedPics !== undefined){
+			$scope.instafeedPics = instafeedPics;
+			console.log($scope.instafeedPics);
+			$interval.cancel(checkPics);
+		}
 
-	// $http.get(url).then(function(response){
-	// 	console.log(response)
-	// })
+	}, 60);
 
-	// $http.jsonp(url).then(function(response){
+
+	
+
+
+
+
+
+
+	// var url = "https://api.instagram.com/v1/tags/batescollege/media/recent?access_token=1359984932.d8d1d50.66ef28ddde2f498094c8e3804f87c627&count=20&callback=instafeedCacheac0a34fb0e9aaffc.parse"
+
+	// $http({
+	// 	url: url,
+	// 	method: 'JSONP'
+	// }).then(function(response){
 	// 	console.log(response);
-	// })
+	// });
+
+
+
+
+
 
 
 
