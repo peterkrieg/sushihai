@@ -19,6 +19,14 @@ angular.module('myApp')
 	};
 });
 
+angular.module('myApp')
+.directive('contactSection', function(){
+	return {
+		templateUrl: 'partials/contact.html'
+	};
+});
+
+
 
 
 
