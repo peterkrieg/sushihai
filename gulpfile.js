@@ -34,7 +34,7 @@ gulp.task('javascript', function() {
 		'./bower_components/bootstrap-sass/assets/javascripts/bootstrap/dropdown.js',
 		'./bower_components/bootstrap-sass/assets/javascripts/bootstrap/tab.js',
 		'./bower_components/bootstrap-sass/assets/javascripts/bootstrap/transition.js',
-		// './bower_components/bootstrap-sass/assets/javascripts/bootstrap/scrollspy.js',
+		'./bower_components/bootstrap-sass/assets/javascripts/bootstrap/scrollspy.js',
 		'./bower_components/bootstrap-sass/assets/javascripts/bootstrap/modal.js',
 		'./bower_components/bootstrap-sass/assets/javascripts/bootstrap/tooltip.js',
 		'./bower_components/bootstrap-sass/assets/javascripts/bootstrap/popover.js',
