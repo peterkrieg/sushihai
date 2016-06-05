@@ -1,8 +1,7 @@
 angular.module('myApp')
-.controller('mainCtrl', function($scope, $state, $http){
+.controller('mainCtrl', function($scope, $http){
 
 	console.log('hello');
-	console.log($state);
 
 
 	var url = 'https://www.instagram.com/sushi_hai/media/?callback=JSON_CALLBACK';

@@ -5,6 +5,12 @@ nav#top-navbar{
 	color: white;
 	font-size: 12px;
 
+	div.container{
+		@include desktopOrMore {
+			width: 95%;
+		}
+	}
+
 	div.sub-container{
 		float: right;
 		display: inline-block;
@@ -23,7 +29,8 @@ nav#top-navbar{
 	}
 
 	div.social-media{
-		float: right;
+		margin-right: 50px;
+		// float: right;
 		i{
 			font-size: 15px;
 			position: relative;
