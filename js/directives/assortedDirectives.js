@@ -40,6 +40,8 @@ angular.module('myApp')
 
 			// stuff I got from css tricks..
 			$('a[href*="#"]:not([href="#"])').click(function() {
+				// $('#main-navbar ul.navbar-nav li').removeClass('active');
+				// $(this).parent().addClass('active');
 				if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
 					var target = $(this.hash);
 					target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
