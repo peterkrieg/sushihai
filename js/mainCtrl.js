@@ -4,10 +4,16 @@ angular.module('myApp')
 	// show fewer photos for mobile
 	var numPhotos = $(window).width() > 700 ? 20 : 10;
 
+	// var accessToken = '1359984932.1677ed0.ccbd5a5b0b1845c1bae2dbb7f4190468'; // this is for my account
+	var accessToken = '274968323.1677ed0.f4fe68615f5d446096e57207c2b534ed';
+
+	// var userId = '1359984932' // this is my (peter krieg ) ID
+	var userId = '274968323';  // sushi hai user ID
+
 	var feed = new Instafeed({ 
 		get: 'user',
-		userId: '274968323', 
-		accessToken: '1359984932.d8d1d50.66ef28ddde2f498094c8e3804f87c627', 
+		userId: userId,  // this is sushi hai ID
+		accessToken: accessToken, 
 		sortBy: 'most-recent', limit: numPhotos });
 
 		feed.run(); 

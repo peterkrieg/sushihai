@@ -23,6 +23,28 @@ div#home{
 				font-size: 12px;
 			}
 		}
+		&.menu{
+			cursor: pointer;
+			margin-top: 300px;
+			width: 120px;
+			position: absolute;
+			height: 40px;
+			@include transition(.5s ease);
+			&:hover{
+				opacity: .7;
+			}
+			a{
+				color: white;
+				width: 100%;
+				display: block;
+				left: 0;
+				right: 0;
+				top: 0;
+				bottom: 0;
+				position: absolute;
+				padding-top: 11px;
+			}
+		}
 	}
 
 

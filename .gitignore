@@ -14,3 +14,7 @@ node_modules/
 scripts/
 
 Secret.js
+
+
+# ignores both .sublime-workspace and .sublime-project files
+*.sublime*
