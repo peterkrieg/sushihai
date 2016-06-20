@@ -1,6 +1,7 @@
 //main navbar, right below the top contact one
 $linkHeight: 30px;
 #main-navbar{
+	@include transition(.5s ease);
 	margin-bottom: 0;
 	.sticky-navbar &{
 		position: fixed;
@@ -10,10 +11,11 @@ $linkHeight: 30px;
 		z-index: 10;
 	}
 	img.logo{
-		height: $navbar-height+2;
+		height: ($navbar-height)-2;
 		width: auto;
 		position: relative;
 		bottom: 26px;
+		margin-top: 2px;
 	}
 
 	ul.navbar-nav{
@@ -48,6 +50,15 @@ $linkHeight: 30px;
 
 	}
 
+	// for when navbar is transparent, to start for example
+	&.transparent{
+		background: none;
+		z-index: 10;
+		border: none;
+		li a{ color: white;
+		}
+
+	}
 
 
 
@@ -56,13 +67,4 @@ $linkHeight: 30px;
 
 
 
-
-
-
-
-
-
-
-
-
-}
+}  // #main-navbar

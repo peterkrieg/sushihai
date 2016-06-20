@@ -25,7 +25,7 @@ angular.module('myApp')
 
 			function sizeImageSlider(){
 				var windowHeight = $(window).height();
-				var navbarsHeight = $('#top-navbar').height() + $('#main-navbar').height();
+				var navbarsHeight = $('#top-navbar').height();
 				var imageSliderHeight = windowHeight - navbarsHeight;
 				$images.css('height', imageSliderHeight);
 			}

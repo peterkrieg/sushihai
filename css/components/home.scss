@@ -1,12 +1,14 @@
 div#home{
 	text-align: center;
+	position: relative;
+	top: -$navbar-height;
 
 	div.text-box{
 		max-width: 700px;
 		width: 90%;
 		position: absolute;
 		z-index: 5;
-		margin-top: 200px;
+		margin-top: 300px;
 		@include phoneOrLess { margin-top: 100px}
 		margin-left: auto;
 		margin-right: auto;
@@ -25,7 +27,7 @@ div#home{
 		}
 		&.menu{
 			cursor: pointer;
-			margin-top: 300px;
+			margin-top: 400px;
 			width: 120px;
 			position: absolute;
 			height: 40px;
