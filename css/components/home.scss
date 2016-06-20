@@ -4,6 +4,9 @@ div#home{
 	top: -$navbar-height;
 
 	div.text-box{
+		&, *{
+			@include transition(.5s ease);
+		}
 		max-width: 700px;
 		width: 90%;
 		position: absolute;
@@ -25,16 +28,14 @@ div#home{
 				font-size: 12px;
 			}
 		}
+		// second text box saying "our menu"
 		&.menu{
 			cursor: pointer;
 			margin-top: 400px;
 			width: 120px;
 			position: absolute;
 			height: 40px;
-			@include transition(.5s ease);
-			&:hover{
-				opacity: .7;
-			}
+			padding: 10px 70px;
 			a{
 				color: white;
 				width: 100%;
@@ -46,7 +47,26 @@ div#home{
 				position: absolute;
 				padding-top: 11px;
 			}
-		}
+			i{
+				color: white;
+				font-size: 20px;
+				opacity: 0;
+				position: absolute;
+				right: -20px;
+				bottom: 11px;
+			}
+			// once you hover, opacity less, and does animation showing chevron
+			&:hover{
+				opacity: .7;
+				a{
+					padding-right: 30px;
+				}
+				i{
+					opacity: 1;
+					right: 20px;
+				}
+			}
+		} // menu
 	}
 
 
