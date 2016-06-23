@@ -28,6 +28,12 @@ div#home{
 				font-size: 12px;
 			}
 		}
+		// first text box with intro
+		&.intro{
+			p{
+				font-style: italic;
+			}
+		}
 		// second text box saying "our menu"
 		&.menu{
 			cursor: pointer;
