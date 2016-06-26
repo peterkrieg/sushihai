@@ -33,11 +33,6 @@ angular.module('myApp')
 				sizeImageSlider();
 			}
 
-			// $images.find('div.image').each(function(){
-			// 	var imageNumber = $(this).attr('data-image-number');
-
-			// 	$(this).css('background-image', 'url(\'img/'+imageNumber+'.jpg\')');
-			// });
 
 			// override image slider, to make it fill screen
 
