@@ -15,6 +15,34 @@
 </head>
 
 <body ng-controller="mainCtrl" data-spy="scroll" data-target="#main-navbar" assorted-directives> 
+	<script>
+		window.fbAsyncInit = function() {
+			FB.init({
+				appId      : '1126172814110828',
+				xfbml      : true,
+				version    : 'v2.6'
+			});
+
+			console.log(FB);
+			FB.api(
+				"/1418852011464345",
+				function (response) {
+					console.log('repsonse from fb api is: \n', response);
+				});
+
+
+
+
+		};
+
+		(function(d, s, id){
+			var js, fjs = d.getElementsByTagName(s)[0];
+			if (d.getElementById(id)) {return;}
+			js = d.createElement(s); js.id = id;
+			js.src = "//connect.facebook.net/en_US/sdk.js";
+			fjs.parentNode.insertBefore(js, fjs);
+		}(document, 'script', 'facebook-jssdk'));
+	</script>
 	<div class="everything-wrapper">
 
 		<nav id="top-navbar">

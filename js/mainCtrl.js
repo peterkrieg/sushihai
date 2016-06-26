@@ -30,6 +30,60 @@ angular.module('myApp')
 	}, 60);
 
 
+	// var fbUrl = 'https://graph.facebook.com/v2.6/1418852011464345';
+	var appId = '1126172814110828';
+	var appSecret = '80434e599e63e7cc2913d1f92e599a95';
+	var albumId = '1420476681301878'
+	var fbUrl = 'https://graph.facebook.com/v2.6/'+albumId+'/photos?key=value&fields=link&access_token='+appId+'|'+appSecret+'';
+	$http.get(fbUrl)
+	.then(function(response){
+		console.log('\n\n\n', response.data.data, '\n\n');
+		var photos = response.data.data;
+		var numPhotos = photos.length;
+
+		var photoArr = [];
+
+		console.log('this is here');
+
+		retrievePhoto(0);
+		function retrievePhoto(index){
+			var photoId = photos[index].id;
+			var photoUrl = 'https://graph.facebook.com/v2.6/'+photoId+'?key=value&access_token='+appId+'|'+appSecret+'&fields=images';
+			$http.get(photoUrl)
+			.then(function(response){
+				var photoSource = response.data.images[0].source;
+				photoArr.push(photoSource);
+				console.log(photoArr);
+				index++;
+				if(index === numPhotos) return;
+				else retrievePhoto(index);
+			});
+		}
+		console.log(photoArr);
+
+
+
+		// $http.get('https://graph.facebook.com/v2.6/'+id+'?key=value&access_token='+appId+'|'+appSecret+'&fields=event,from,height,images')
+		// .then(function(response){
+		// 	console.log('photo is: ', response.data);
+		// })
+	});
+
+	// fbAsyncInit();
+// 	// FB.api(
+//  //    "/1418852011464345",
+//  //    function (response) {
+//  //    	console.log('repsonse from fb api is: \n', response);
+//  //      // if (response && !response.error) {
+//  //      // 	co
+//  //      //   /* handle the result */
+//  //      // }
+//  //    }
+// );
+
+
+
+
 	
 
 
