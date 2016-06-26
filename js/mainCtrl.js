@@ -39,27 +39,44 @@ angular.module('myApp')
 	.then(function(response){
 		console.log('\n\n\n', response.data.data, '\n\n');
 		var photos = response.data.data;
-		var numPhotos = photos.length;
+		// var numPhotos = photos.length;
 
-		var photoArr = [];
+		var photoUrls = [];
 
-		console.log('this is here');
 
-		retrievePhoto(0);
-		function retrievePhoto(index){
-			var photoId = photos[index].id;
-			var photoUrl = 'https://graph.facebook.com/v2.6/'+photoId+'?key=value&access_token='+appId+'|'+appSecret+'&fields=images';
+
+		photos.forEach(function(photo, index){
+			var photoUrl = 'https://graph.facebook.com/v2.6/'+photo.id+'?key=value&access_token='+appId+'|'+appSecret+'&fields=images';
 			$http.get(photoUrl)
 			.then(function(response){
-				var photoSource = response.data.images[0].source;
-				photoArr.push(photoSource);
-				console.log(photoArr);
-				index++;
-				if(index === numPhotos) return;
-				else retrievePhoto(index);
+				console.log(response.data, index);
+				photoUrls[index] = response.data.images[0].source;
+				// if every photoUrl is defined, 
+				if(photoUrls.length === photos.length && photoUrls.every(function(url){return url})){
+					console.log('photo URLS are: \n', photoUrls);
+				}
 			});
-		}
-		console.log(photoArr);
+
+
+
+		});
+
+
+		// retrievePhoto(0);
+		// function retrievePhoto(index){
+		// 	var photoId = photos[index].id;
+		// 	var photoUrl = 'https://graph.facebook.com/v2.6/'+photoId+'?key=value&access_token='+appId+'|'+appSecret+'&fields=images';
+		// 	$http.get(photoUrl)
+		// 	.then(function(response){
+		// 		var photoSource = response.data.images[0].source;
+		// 		photoArr.push(photoSource);
+		// 		console.log(photoArr);
+		// 		index++;
+		// 		if(index === numPhotos) return;
+		// 		else retrievePhoto(index);
+		// 	});
+		// }
+		// console.log(photoArr);
 
 
 
