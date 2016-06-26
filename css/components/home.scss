@@ -12,7 +12,7 @@ div#home{
 		position: absolute;
 		z-index: 5;
 		margin-top: 300px;
-		@include phoneOrLess { margin-top: 100px}
+		@include phoneOrLess { margin-top: 150px}
 		margin-left: auto;
 		margin-right: auto;
 		left: 50%;
@@ -20,6 +20,7 @@ div#home{
 		right: 0;
 		background: rgba(0, 0, 0, .6);
 		padding: 10px 40px;
+		@include phoneOrLess { padding: 10px 10px;}
 		border: 1px solid #eee;
 		p{
 			color: white;
@@ -35,13 +36,22 @@ div#home{
 			}
 		}
 		// second text box saying "our menu"
-		&.menu{
+		&.small-box{
 			cursor: pointer;
 			margin-top: 400px;
 			width: 120px;
 			position: absolute;
 			height: 40px;
 			padding: 10px 70px;
+			@include phoneOrLess {
+				margin-top: 300px;
+			}
+			&.menu{
+				right: 150px;
+			}
+			&.pricing{
+				left: 150px;
+			}
 			a{
 				color: white;
 				width: 100%;
