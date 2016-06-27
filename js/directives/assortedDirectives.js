@@ -81,10 +81,8 @@ angular.module('myApp')
 				if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
 					var target = $(this.hash);
 					var offset = +$(this).attr('offset') || 70;
-					console.log(offset);
 					target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
 					if (target.length) {
-						console.warn(offset);
 						$('html, body').animate({
 							scrollTop: target.offset().top - offset
 						}, 1000);
