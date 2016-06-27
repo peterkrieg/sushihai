@@ -2,12 +2,48 @@
 	<h1 class="main-header">Gallery</h1>
 
 	<div class="container image-container">
-		
-		<div class="images" ng-show="instafeedPics">
-			<div class="image" ng-repeat="image in instafeedPics">
-				<img class="instagram-photo" ng-src="{{image.images.standard_resolution.url}}" alt="">
+
+
+		<div class="images" ng-show="photoUrls">
+			<div class="image" ng-repeat="url in photoUrls">
+				<img class="gallery-photo" ng-src="{{url}}" alt="">
 			</div>
-		</div><!-- images -->
+		</div>
+
+
+		<hr>
+
+		<h3>Media</h3>
+
+
+
+
+
+
+		<div class="instagram-container" slick-instagram
+		ng-if="instafeedPics"
+		>
+			<img 	ng-repeat="image in instafeedPics" 
+						ng-src="{{image.images.standard_resolution.url}}" 
+
+						alt="">
+			
+
+		</div>
+		
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 		<hr>
 		<p class="see-more">See more on <a href="https://instagram.com/sushi_hai" target="_blank">Instagram</a></p>

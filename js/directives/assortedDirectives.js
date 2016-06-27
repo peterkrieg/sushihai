@@ -30,7 +30,6 @@ angular.module('myApp')
 .directive('backImg', function(){
 	return function(scope, element, attrs){
 		attrs.$observe('backImg', function(value) {
-			console.log('value tomato:', value);
 			element.css({
 				'background-image': 'url(' + value +')',
 			});
@@ -65,6 +64,67 @@ angular.module('myApp')
 					}
 				}
 			});
+		}
+	};
+});
+
+
+angular.module('myApp')
+.directive('slickInstagram', function($interval){
+	return {
+		link: function(scope, elem, attrs){
+			// doesn't get loaded until instafeedPics attached to scope
+			console.log(elem);
+			console.warn(scope.instafeedPics);
+			console.log( elem.children().length);
+
+			// var waitForPics = $interval(function(){
+			// 	// console.log(elem.html());
+			// 	// if(elem.has().length === scope.instafeedPics.length){
+			// 	// 	slickInit();
+			// 	// 	$interval.cancel(waitForPics);
+			// 	// }
+			// }, 2000);
+
+			setTimeout(function(){
+				slickInit();
+			}, 1500);
+
+
+			// function slickInit(){
+			// 	console.log(elem.has().length)
+			// 	$(elem).slick({
+			// 		centerMode: true,
+			// 		centerPadding: '60px',
+			// 		slidesToShow: 3,
+			// 		autoplay: true,
+			// 		autoplaySpeed: 500,
+			// 		responsive: [
+			// 		{
+			// 			breakpoint: 768,
+			// 			settings: {
+			// 				arrows: true,
+			// 				centerMode: true,
+			// 				centerPadding: '40px',
+			// 				slidesToShow: 3
+			// 			}
+			// 		},
+			// 		{
+			// 			breakpoint: 480,
+			// 			settings: {
+			// 				arrows: true,
+			// 				centerMode: true,
+			// 				centerPadding: '40px',
+			// 				slidesToShow: 1
+			// 			}
+			// 		}
+			// 		]
+			// 	});
+			// }
+			
+
+
+
 
 
 
@@ -72,3 +132,29 @@ angular.module('myApp')
 		}
 	};
 });
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

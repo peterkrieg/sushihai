@@ -19,7 +19,7 @@ angular.module('myApp')
 
 			function slickInit(){
 				var $images = $('ul.images');
-				console.log($images);
+				// console.log($images);
 
 				$images.slick({
 

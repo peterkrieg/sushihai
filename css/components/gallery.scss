@@ -22,7 +22,7 @@ section#gallery{
 		width: 100%;
 	}
 
-	img.instagram-photo{
+	img.gallery-photo{
 		height: 300px;
 		width: auto;
 		margin-right: 20px;
@@ -39,6 +39,35 @@ section#gallery{
 		margin-bottom: 30px;
 		border: 1px solid #111;
 	}
+
+	div.instagram-container{
+		display: flex;
+		flex-direction: row;
+		padding-top: 50px;
+		height: 400px;
+		overflow-y: scroll;
+		img{
+			height: 300px;
+			// width: 300px;
+			// height: auto;
+			margin: 0 30px;
+
+		}
+	}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 	p.see-more{
 		margin-bottom: 20px;

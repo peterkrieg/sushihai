@@ -23,7 +23,7 @@ angular.module('myApp')
 	var checkPics = $interval(function(){
 		if(window.instafeedPics !== undefined){
 			$scope.instafeedPics = instafeedPics;
-			console.log($scope.instafeedPics);
+			// console.log($scope.instafeedPics);
 			$interval.cancel(checkPics);
 		}
 
@@ -47,11 +47,11 @@ angular.module('myApp')
 			var photoUrl = 'https://graph.facebook.com/v2.6/'+photo.id+'?key=value&access_token='+appId+'|'+appSecret+'&fields=images';
 			$http.get(photoUrl)
 			.then(function(response){
-				console.log(response.data, index);
+				// console.log(response.data, index);
 				photoUrls[index] = response.data.images[0].source;
 				// if every photoUrl is defined, 
 				if(photoUrls.length === photos.length && photoUrls.every(function(url){return url})){
-					console.log('photo URLS are: \n', photoUrls);
+					// console.log('photo URLS are: \n', photoUrls);
 					$scope.photoUrls = photoUrls;
 				}
 			});
