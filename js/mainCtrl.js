@@ -30,6 +30,7 @@ angular.module('myApp')
 	}, 60);
 
 
+
 	// var fbUrl = 'https://graph.facebook.com/v2.6/1418852011464345';
 	var appId = '1126172814110828';
 	var appSecret = '80434e599e63e7cc2913d1f92e599a95';
