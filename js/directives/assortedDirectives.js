@@ -43,11 +43,36 @@ angular.module('myApp')
 
 
 angular.module('myApp')
-.directive('assortedDirectives', function(){
+.directive('assortedDirectives', function($interval){
 	return {
 		link: function(scope, elem, attrs){
+			var checkIfImagesLoaded = $interval(function(){
+				console.log('interval run')
+				if(scope.photoUrls){
+					$('body').hide();
+					$('body').css('opacity', '1');
+					$('body').fadeIn(400);
+					$interval.cancel(checkIfImagesLoaded);
+				}
+			}, 500)
+
+
+
+
+
 			// initiates bootstrap scrollspy
-			$('body').scrollspy({ target: '#main-navbar', offset: 75});
+			$('body').scrollspy({ target: '#main-navbar', offset: 80});
+
+
+
+
+
+
+
+
+
+
+
 
 			// stuff I got from css tricks..
 			$('a[href*="#"]:not([href="#"])').click(function() {
@@ -55,9 +80,11 @@ angular.module('myApp')
 				// $(this).parent().addClass('active');
 				if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
 					var target = $(this.hash);
-					var offset = +$(this).attr('offset') || 75;
+					var offset = +$(this).attr('offset') || 70;
+					console.log(offset);
 					target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
 					if (target.length) {
+						console.warn(offset);
 						$('html, body').animate({
 							scrollTop: target.offset().top - offset
 						}, 1000);
@@ -87,9 +114,9 @@ angular.module('myApp')
 			// 	// }
 			// }, 2000);
 
-			setTimeout(function(){
-				slickInit();
-			}, 1500);
+			// setTimeout(function(){
+			// 	slickInit();
+			// }, 1500);
 
 
 			// function slickInit(){

@@ -5,7 +5,7 @@
 
 
 		<div class="images" ng-show="photoUrls">
-			<div class="image" ng-repeat="url in photoUrls">
+			<div class="image" ng-repeat="url in photoUrls track by $index">
 				<img class="gallery-photo" ng-src="{{url}}" alt="">
 			</div>
 		</div>
