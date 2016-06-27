@@ -47,7 +47,7 @@ angular.module('myApp')
 	return {
 		link: function(scope, elem, attrs){
 			// initiates bootstrap scrollspy
-			$('body').scrollspy({ target: '#main-navbar', offset: 70});
+			$('body').scrollspy({ target: '#main-navbar', offset: 75});
 
 			// stuff I got from css tricks..
 			$('a[href*="#"]:not([href="#"])').click(function() {
@@ -55,7 +55,7 @@ angular.module('myApp')
 				// $(this).parent().addClass('active');
 				if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
 					var target = $(this.hash);
-					var offset = +$(this).attr('offset') || 72;
+					var offset = +$(this).attr('offset') || 75;
 					target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
 					if (target.length) {
 						$('html, body').animate({
