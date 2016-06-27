@@ -3,6 +3,10 @@ div#home{
 	position: relative;
 	top: -$navbar-height;
 
+	div.photo-slideshow{
+		overflow: hidden;
+	}
+
 	div.text-box{
 		&, *{
 			@include transition(.5s ease);
