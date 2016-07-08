@@ -2,14 +2,7 @@ angular.module('myApp')
 .directive('slickImage', function($interval){
 	return {
 		link: function(scope, elem, attrs){
-
-			var checkIfImagesLoaded = $interval(function(){
-				if(scope.photoUrls) {
-					$interval.cancel(checkIfImagesLoaded);
-					pageInit();
-				}
-
-			}, 50);
+			pageInit();
 
 			function pageInit(){
 				slickInit();

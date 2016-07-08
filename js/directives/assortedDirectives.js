@@ -64,12 +64,34 @@ angular.module('myApp')
 .directive('assortedDirectives', function($interval){
 	return {
 		link: function(scope, elem, attrs){
+			$(function(){
+				console.log('inside link!');
+
+				var firstImg = $('ul.images .img1');
+
+				var testImg = new Image()
+				testImg.src = 'img/img1.jpg';
+
+				// hack to notify script until 1st image of slideshow loads, and only then show the container of content
+				testImg.onload = function(){
+					// need to hide loading container
+					$('div.loading-container').hide();
+					console.log('image has loaded!')
+					// jquery hide makes display none, then resets visibility, then fades in
+					$('div.everything-wrapper').hide().css('visibility', 'visible').fadeIn(500);
+				}
+
+			});
+
+
+
+
 			var checkIfImagesLoaded = $interval(function(){
 				console.log('interval run')
 				if(scope.photoUrls){
-					$('body').hide();
-					$('body').css('opacity', '1');
-					$('body').fadeIn(400);
+					// $('body').hide();
+					// $('body').css('opacity', '1');
+					// $('body').fadeIn(400);
 					$interval.cancel(checkIfImagesLoaded);
 				}
 			}, 500)

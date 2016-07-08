@@ -77,6 +77,36 @@ div.everything-wrapper{
 	padding-bottom: $footerHeight;
 }
 
+div.loading-container{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	position: fixed;
+	top: 0; bottom: 0; right: 0; left: 0;
+	background-color: #eee;
+	background: url('../img/linen.png');
+	// sushi hai main header
+	h1{
+		font-size: 50px;
+		margin-bottom: 30px;
+	}
+	div.loading-content{
+		position: relative;
+		bottom: 50px;
+	}
+	h4{
+		font-size: 25px;
+		text-align: center;
+		margin-top: 20px;
+	}
+	img{
+		max-width: 150px;
+		// center image
+		display: block;
+		margin: auto;
+	}
+}
+
 
 
 
