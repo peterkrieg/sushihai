@@ -27,15 +27,33 @@ angular.module('myApp')
 });
 
 angular.module('myApp')
-.directive('backImg', function(){
-	return function(scope, element, attrs){
-		attrs.$observe('backImg', function(value) {
-			element.css({
-				'background-image': 'url(' + value +')',
-			});
-		});
+.directive('assignPictures', function(){
+	return function(scope, elem, attrs){
+		var $images = $(elem).find('div');
+		$images.each(function(index, $img){
+			// make sure it's a jquery object, not raw HTML
+			$img = $($img);
+			// class of each image corresponds to name of file on server
+			var imageSrc = $img.attr('class')+'.jpg';
+			console.log(imageSrc);
+			$img.css('background-image', 'url(img/'+imageSrc+')');
+		})
 	};
 });
+
+// used for slideshow pictures, when they were hooked up to facebook
+// angular.module('myApp')
+// .directive('backImg', function(){
+// 	return function(scope, element, attrs){
+// 		attrs.$observe('backImg', function(value) {
+// 			element.css({
+// 				'background-image': 'url(' + value +')',
+// 			});
+// 		});
+// 	};
+// });
+
+
 
 
 
