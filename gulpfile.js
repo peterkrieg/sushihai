@@ -5,6 +5,9 @@ var concat = require('gulp-concat');
 var uglify = require('gulp-uglify');
 var sourcemaps = require('gulp-sourcemaps');
 
+var postcss    = require('gulp-postcss');
+
+
 var ngAnnotate = require('gulp-ng-annotate');
 
 
@@ -99,12 +102,14 @@ gulp.task('sass', function () {
 		'./css/main.scss',
 		])
 	// .pipe(sourcemaps.init())
-	.pipe(sass({outputStyle: 'compressed'})
-		// .pipe(sass()
+	.pipe(sass(
+		// {outputStyle: 'compressed'}
+		)
 
 		.on('error', sass.logError))
 
 	.pipe(concat('main.css'))
+	.pipe( postcss([ require('autoprefixer'), require('precss') ]) )
 	// .pipe(sourcemaps.write())
 
 	.pipe(gulp.dest('./compiled'));
