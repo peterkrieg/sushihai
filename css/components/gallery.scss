@@ -41,12 +41,13 @@ section#gallery{
 	}
 
 	div.instagram-container{
-		display: flex;
-		flex-direction: row;
 		padding-top: 50px;
-		height: 400px;
-		overflow-y: scroll;
+		overflow-x: scroll;
+		// for some reason need to explicity state this
+		overflow-y: hidden;
+		white-space: nowrap;
 		img{
+			display: inline;
 			height: 300px;
 			margin: 0 30px;
 		}
